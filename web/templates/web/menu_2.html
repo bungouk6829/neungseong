@@ -1,0 +1,244 @@
+{%extends 'web/base_menu.html'%}
+{%load static%}
+
+{%block korean%}
+        {%if page == 'business' or page == 'asbestos' or page == 'demolition' or page == 'waste' or page == 'civil'%}
+        사업분야
+        {%elif page == 'major'%}
+        주요공사
+        {%endif%}
+{%endblock%}
+
+{%block english%}
+        {%if page == 'business' or page == 'asbestos' or page == 'demolition' or page == 'waste' or page == 'civil'%}
+        Business
+        {%elif page == 'major'%}
+        Major Business
+        {%endif%}
+{%endblock%}
+
+{%block menu%}
+    {%if page == 'business' or page == 'asbestos' or page == 'demolition' or page == 'waste' or page == 'civil'%}
+        <a href="{%url 'web:menu' page='business'%}"><li>사업분야</li></a>
+        <a href="{%url 'web:menu' page='demolition'%}"><li>구조물해체공사</li></a>
+        <a href="{%url 'web:menu' page="asbestos"%}"><li>석면해체공사</li></a>
+        <a href="{%url 'web:menu' page="waste"%}"><li>건설폐기물처리</li></a>
+        <a href="{%url 'web:menu' page="civil"%}"><li>토목공사</li></a>
+        <a href="{%url 'web:menu' page='equipment'%}"><li>중장비대여</li></a>
+    {%elif page == 'major'%}
+        <a href="{%url 'web:menu' page='major'%}"><li>주요공사</li></a>
+    {%endif%}
+{%endblock%}
+
+<!--컨테이너-->
+{%block page%}
+        {%if page == 'business' or page == 'asbestos' or page == 'demolition' or page == 'waste' or page == 'civil'%}
+        | 사업 분야
+        {%elif page == 'major'%}
+        | 주요 공사
+        {%endif%}
+{%endblock%}
+
+{%block container%}
+    <div class="content_box">
+      {%if page == 'business'%}
+        <div class="business_introduce_box">
+          <div>
+            <h1>
+              저희 (주)능성산업개발은 비계구조물해체공사를 바탕으로 주택철거,공장철거,상가철거등을 영위하고 있으며 <br>
+              석면해체공사, 중장비대여업, 건설폐기물처리업, 토목공사등을 전문으로 임하고 있습니다.​<br>
+              사람들은 새로운 것과 현대시대에 맞는 건축물을 생각하고 실현하고 싶어합니다.<br>
+              이것을 실천하기 위해서는 첫공사인 건축물해체가 필요합니다.​<br>
+              저희는 고객님들의 새로운 눈과 안락함을 만들어드리는 (주)능성산업개발이 되겠습니다.​
+            </h1>
+          </div>
+        </div>
+        <div class="business_box">
+          <h1>───── 사업 분야 ─────</h1><br><br><br>
+          <div class="business_img_box">
+            <h2>구조물해체공사</h2>
+              <a href="{%url 'web:menu' page='demolition'%}"><img src="{%static 'web/img/sh_townhouse.jpg'%}"></a>
+          </div>
+          <div class="business_img_box">
+            <h2>공장철거</h2>
+              <a href="{%url 'web:menu' page='demolition'%}"><img src="{%static 'web/img/jungdong_factory.jpg'%}"></a>
+          </div>
+          <div class="business_img_box">
+            <h2>석면해체공사</h2>
+              <a href="{%url 'web:menu' page="asbestos"%}"><img src="{%static 'web/img/asbestos_2.jpg'%}"></a>
+          </div>
+          <div class="business_img_box">
+            <h2>건설폐기물 처리</h2>
+              <a href="{%url 'web:menu' page='waste'%}"><img src="{%static 'web/img/waste.jpg'%}"></a>
+          </div>
+          <div class="business_img_box">
+            <h2>토목공사</h2>
+            <a href="{%url 'web:menu' page='civil'%}"><img src="{%static 'web/img/civil.jpg'%}"></a>
+          </div>
+          <div class="business_img_box">
+            <h2>중장비 대여</h2>
+              <a href="{%url 'web:menu' page="equipment"%}"><img src="{%static 'web/img/rental.jpg'%}"></a>
+          </div>
+        </div>
+      {%elif page == 'major'%}
+      <div class="major_img_box">
+        <h1>───── 주요공사 갤러리 ─────</h1>
+        <br><br>
+        <p>* 이미지 클릭시 세부내용 확인이 가능합니다.</p>
+        <a class="mg-link" href="{%static 'web/img/major_1.jpg'%}" title="SH 오피스텔 신축공사 철거">
+          <img src="{%static 'web/img/major_1.jpg'%}" alt="서울특별시 금천구 독산동 1005-3번지">
+        </a>
+        <a class="mg-link" href="{%static 'web/img/major_2.jpg'%}" title="SH 오피스텔 신축공사 철거">
+          <img src="{%static 'web/img/major_2.jpg'%}" alt="서울특별시 은평구 대조동 179-21, 43, 44번지">
+        </a>
+        <a class="mg-link" href="{%static 'web/img/major_3.jpg'%}" title="SH 다세대빌라 신축공사 철거">
+          <img src="{%static 'web/img/major_3.jpg'%}" alt="서울특별시 금천구 시흥동 824-16, 17, 18, 19번지">
+        </a>
+        <a class="mg-link" href="{%static 'web/img/major_4.jpg'%}" title="공장 철거 및 폐기물처리">
+          <img src="{%static 'web/img/major_4.jpg'%}" alt="경기도 용인시 기흥구 중동 668-5번지">
+        </a>
+        <a class="mg-link" href="{%static 'web/img/major_5.jpg'%}" title="SH 다세대빌라 신축공사 철거">
+          <img src="{%static 'web/img/major_5.jpg'%}" alt="서울특별시 광진구 중곡동 56-4번지">
+        </a>
+        <a class="mg-link" href="{%static 'web/img/major_6.jpg'%}" title="SH 다세대빌라 신축공사 철거">
+          <img src="{%static 'web/img/major_6.jpg'%}" alt="서울특별시 금천구 시흥동 940-25번지">
+        </a>
+        <a class="mg-link" href="{%static 'web/img/major_7.jpg'%}" title="다세대빌라 신축공사 철거">
+          <img src="{%static 'web/img/major_7.jpg'%}" alt="서울특별시 송파구 송파동 39-15">
+        </a>
+        <a class="mg-link" href="{%static 'web/img/major_8.jpg'%}" title="다세대빌라 신축공사 철거">
+          <img src="{%static 'web/img/major_8.jpg'%}" alt="경기도 부천시 삼정동 281-13, 14, 15, 16번지">
+        </a>
+        <a class="mg-link" href="{%static 'web/img/major_9.jpg'%}" title="원룸 신축공사 철거">
+          <img src="{%static 'web/img/major_9.jpg'%}" alt="경기도 화성시 안녕동 180-518, 519, 345번지">
+        </a>
+        <a class="mg-link" href="{%static 'web/img/major_10.jpg'%}" title="SH 다세대빌라 신축공사 철거">
+          <img src="{%static 'web/img/major_10.jpg'%}" alt="서울특별시 금천구 시흥동 210-6, 15번지, 211-5번지">
+        </a>
+        <a class="mg-link" href="{%static 'web/img/major_11.jpg'%}" title="SH 오피스텔 신축공사 철거">
+          <img src="{%static 'web/img/major_11.jpg'%}" alt="서울특별시 금천구 독산동 952번지, 952-40번지">
+        </a>
+      </div>
+      {%elif page == 'asbestos'%}
+          <div class="asbestos_img_box">
+            <h1>───── 석면해체공사 ─────</h1><br><br>
+            <img src="{%static 'web/img/asbestos_page_1.png'%}">
+            <img src="{%static 'web/img/asbestos_page_2.png'%}">
+            <img src="{%static 'web/img/asbestos_page_3.png'%}">
+            <img src="{%static 'web/img/asbestos_page_4.png'%}">
+            <img src="{%static 'web/img/asbestos_page_5.png'%}">
+            <img src="{%static 'web/img/asbestos_page_6.png'%}">
+            <img src="{%static 'web/img/asbestos_page_7.png'%}">
+          </div>
+    </div>
+    {%elif page == 'demolition'%}
+        <div class="major_img_box">
+            <br><h1>───── 주택철거 ─────</h1><br>
+            <a class="mg-link" href="{%static 'web/img/home_1.jpg'%}" title="주택철거 1">
+                <img src="{%static 'web/img/home_1.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/home_2.jpg'%}" title="주택철거 2">
+                <img src="{%static 'web/img/home_2.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/home_3.jpg'%}" title="주택철거 3">
+            <img src="{%static 'web/img/home_3.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/home_4.jpg'%}" title="주택철거 4">
+                <img src="{%static 'web/img/home_4.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/home_5.jpg'%}" title="주택철거 5">
+                <img src="{%static 'web/img/home_5.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/home_6.jpg'%}" title="주택철거 6">
+                <img src="{%static 'web/img/home_6.jpg'%}" alt="">
+            </a>
+          </div>
+          <div class="major_img_box">
+            <h1>───── 상가철거 ─────</h1><br><br>
+            <a class="mg-link" href="{%static 'web/img/town_1.jpg'%}" title="상가철거 1">
+                <img src="{%static 'web/img/town_1.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/town_2.jpg'%}" title="상가철거 2">
+                <img src="{%static 'web/img/town_2.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/town_3.jpg'%}" title="상가철거 3">
+            <img src="{%static 'web/img/town_3.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/town_4.jpg'%}" title="상가철거 4">
+                <img src="{%static 'web/img/town_4.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/town_5.jpg'%}" title="상가철거 5">
+                <img src="{%static 'web/img/town_5.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/town_6.jpg'%}" title="상가철거 6">
+                <img src="{%static 'web/img/town_6.jpg'%}" alt="">
+            </a>
+          </div>
+          <div class="major_img_box">
+            <h1>───── 공장철거 ─────</h1><br><br>
+            <a class="mg-link" href="{%static 'web/img/factory_1.jpg'%}" title="공장철거 1">
+                <img src="{%static 'web/img/factory_1.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/factory_2.jpg'%}" title="공장철거 2">
+                <img src="{%static 'web/img/factory_2.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/factory_3.jpg'%}" title="공장철거 3">
+            <img src="{%static 'web/img/factory_3.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/factory_4.jpg'%}" title="공장철거 4">
+                <img src="{%static 'web/img/factory_4.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/factory_5.jpg'%}" title="공장철거 5">
+                <img src="{%static 'web/img/factory_5.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/factory_6.jpg'%}" title="공장철거 6">
+                <img src="{%static 'web/img/factory_6.jpg'%}" alt="">
+            </a>
+          </div>
+      {%elif page == 'waste'%}
+          <div class="major_img_box">
+            <h1>───── 건설폐기물처리 ─────</h1><br><br>
+            <a class="mg-link" href="{%static 'web/img/waste_1.jpg'%}" title="건설폐기물처리 1">
+                <img src="{%static 'web/img/waste_1.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/waste_2.jpg'%}" title="건설폐기물처리 2">
+                <img src="{%static 'web/img/waste_2.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/waste_3.jpg'%}" title="건설폐기물처리 3">
+            <img src="{%static 'web/img/waste_3.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/waste_4.jpg'%}" title="건설폐기물처리 4">
+                <img src="{%static 'web/img/waste_4.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/waste_5.jpg'%}" title="건설폐기물처리 5">
+                <img src="{%static 'web/img/waste_5.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/waste_6.jpg'%}" title="건설폐기물처리 6">
+                <img src="{%static 'web/img/waste_6.jpg'%}" alt="">
+            </a>
+          </div>
+      {%elif page == 'civil'%}
+          <div class="major_img_box">
+            <h1>───── 토목공사 ─────</h1><br><br>
+            <a class="mg-link" href="{%static 'web/img/civil_1.jpg'%}" title="토목공사 1">
+                <img src="{%static 'web/img/civil_1.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/civil_2.jpg'%}" title="토목공사 2">
+                <img src="{%static 'web/img/civil_2.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/civil_3.jpg'%}" title="토목공사 3">
+            <img src="{%static 'web/img/civil_3.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/civil_4.jpg'%}" title="토목공사 4">
+                <img src="{%static 'web/img/civil_4.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/civil_5.jpg'%}" title="토목공사 5">
+                <img src="{%static 'web/img/civil_5.jpg'%}" alt="">
+            </a>
+            <a class="mg-link" href="{%static 'web/img/civil_6.jpg'%}" title="토목공사 6">
+                <img src="{%static 'web/img/civil_6.jpg'%}" alt="">
+            </a>
+          </div>
+    {%endif%}
+    </div>
+{%endblock%}
